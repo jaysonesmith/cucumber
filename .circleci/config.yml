@@ -8,6 +8,8 @@ aliases:
       gem install bundler io-console
       pip install pipenv==8.3.2
       curl --fail -L http://cpanmin.us/ > /usr/local/bin/cpanm && chmod +x /usr/local/bin/cpanm
+      RUN mkdir -p /protobuf
+      RUN curl -L https://github.com/google/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz | tar xvz --strip-components=1 -C /protobuf
     when: always
 
 version: 2
@@ -26,5 +28,5 @@ jobs:
 workflows:
   version: 2
   release:
-    jobs: 
+    jobs:
       - c21e
