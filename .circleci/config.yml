@@ -22,7 +22,7 @@ jobs:
     steps:
       - run: *setup_environment
       - checkout
-      - run: cd c21e
+      - run: cd ./c21e
       - run: make
 
 
