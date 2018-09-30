@@ -4,6 +4,8 @@ jobs:
     docker:
       - image: yoant/circleci-node-ruby
     steps:
+      - checkout
+      - run: cd c21e
       - run: make
 
 
