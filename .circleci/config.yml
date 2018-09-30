@@ -1,14 +1,10 @@
-
-
-
 version: 2
 jobs:
   c21e: 
-    build:
-      docker:
-        - image: yoant/circleci-node-ruby
-      steps:
-        - run: make
+    docker:
+      - image: yoant/circleci-node-ruby
+    steps:
+      - run: make
 
 
 workflows:
